@@ -12,8 +12,7 @@ import java.util.stream.Collectors;
  */
 public class AlternatingCase {
 
-	public String toAlternativeString(final String input)
-	{
+	public String toAlternativeString(final String input) {
 		final StringBuffer alternating = new StringBuffer(input.length());
 		for (String entry : Arrays.stream(input.split("")).collect(Collectors.toList()))
 		{
