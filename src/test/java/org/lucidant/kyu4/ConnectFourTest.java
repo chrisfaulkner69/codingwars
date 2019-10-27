@@ -80,7 +80,7 @@ class ConnectFourTest {
         assertEquals("Red", ConnectFour.whoIsWinner(myList));
     }
 
-    @DisplayName("Yellow wins with a diagonal to north west. A0, B1, C2 and D3.")
+    @DisplayName("Yellow wins with a diagonal to north east. A0, B1, C2 and D3.")
     @Test
     void boardDiagonalYellowFromOrigin() {
         final List<String> myList = Arrays.asList(
@@ -92,7 +92,26 @@ class ConnectFourTest {
         assertEquals("Yellow", ConnectFour.whoIsWinner(myList));
     }
 
-    @Disabled
+    @DisplayName("Red wins with a diagonal to north west. G0, F1, E2, D3")
+    @Test
+    void boardDiagonalFromOrigin() {
+        final List<String> myList = Arrays.asList(
+                "G_Red " , // G0
+                " F_Yellow", // F0
+                "F_Red", // F1
+                "D_Yellow", // D0
+                "D_Red", // D1
+                "D_Yellow", // D2
+                "D_Red",  // D3
+                "C_Yellow", // C0
+                "E_Red", // E0
+                "E_Yellow", // E1
+                "E_Red" // E2
+        );
+        assertEquals("Yellow", ConnectFour.whoIsWinner(myList));
+    }
+
+//    @Disabled
     @DisplayName("Board is full with no winner.")
     @Test
     void boardFullNoWinner() {

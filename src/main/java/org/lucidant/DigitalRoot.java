@@ -1,5 +1,5 @@
 /**
- * 
+ *
  */
 package org.lucidant;
 
@@ -16,7 +16,11 @@ public class DigitalRoot {
 		int startValue = (input < 0) ? Math.abs(input) : input;
 		while (startValue >= 10)
 		{
-			startValue = Arrays.stream(String.valueOf(startValue).split("")).map(Integer::valueOf).collect(Collectors.toList()).stream().mapToInt(i -> i).sum();
+			startValue = Arrays.stream(String.valueOf(startValue).split(""))
+							   .map(Integer::valueOf)
+							   .collect(Collectors.toList())
+							   .stream()
+							   .mapToInt(i -> i).sum();
 		}
 		return startValue;
 	}

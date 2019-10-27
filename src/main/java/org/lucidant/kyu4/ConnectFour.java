@@ -30,8 +30,8 @@ public class ConnectFour {
          // We have A_Red, B_Yellow as the identifiers
         for (final String move : myList) {
             final String[] res = move.split(SEPARATOR);
-            final WinStatus counter =  WinStatus.valueOf(res[1].toUpperCase());
-            final String colName = res[0];
+            final WinStatus counter =  WinStatus.valueOf(res[1].toUpperCase().trim());
+            final String colName = res[0].trim();
             if (addAndCheckForWinner(board, colName.toUpperCase(), counter)) {
                 return counter;
             }
@@ -80,9 +80,30 @@ public class ConnectFour {
     }
 
     private static boolean checkDiagonal(WinStatus[][] board, int colNum, int row, WinStatus piece) {
-        int consecutiveNorWstSthEasr = 0;
-        int consecutiveNorEastSthWest = 0;
+        int consecutiveNorWstSthEst = 0;
+        int consecutiveNorEstSthWst = 0;
 
+        int rowsToTop = ROW_COUNT - 1 - row;
+        int colsToRight = COL_COUNT - 1 - colNum;
+
+        for (int i = 1; i <= Math.min(rowsToTop, colsToRight); i++) {
+            if (board[row + i][colNum + i] != piece) {
+                break;
+            }
+            consecutiveNorEstSthWst++;
+        }
+
+        int colsToLeft = colNum - 0;
+
+        for (int i = 1; i <= Math.min(rowsToTop, colsToLeft); i++) {
+            if (board[row - i][colNum - i] != piece) {
+                break;
+            }
+            consecutiveNorWstSthEst++;
+        }
+
+
+        return (consecutiveNorEstSthWst + consecutiveNorWstSthEst + 1) >= 4;
 
     }
 

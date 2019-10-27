@@ -1,5 +1,5 @@
 /**
- * 
+ *
  */
 package org.lucidant;
 
@@ -19,7 +19,7 @@ class SentenceWordCountTest {
 	 * @throws Exception
 	 */
 	@BeforeEach
-	void setUp() throws Exception {
+	void setUp() {
 		solution = new SentenceWordCount();
 	}
 
