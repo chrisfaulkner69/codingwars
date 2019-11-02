@@ -58,7 +58,7 @@ public class RomanNumeral {
 
 	}
 
-	private final static String toRoman(int number) {
+	protected final static String toRoman(int number) {
 		int l = map.floorKey(number);
 		if (number == l) {
 			return map.get(number);
