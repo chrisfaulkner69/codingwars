@@ -1,5 +1,5 @@
 /**
- * 
+ *
  */
 package org.lucidant;
 
@@ -14,7 +14,7 @@ import java.util.stream.Collectors;
  *
  */
 public class AnagramDifference {
-	
+
 	public static int difference(final String wordLeft, final String wordRight)
 	{
 		int sizeLeft = wordLeft == null ? 0 : wordLeft.trim().length();
@@ -25,7 +25,7 @@ public class AnagramDifference {
 		{
 			return sizeRight;
 		}
-		else if( sizeRight == 0 && sizeLeft > 0)
+		else if (sizeRight == 0 && sizeLeft > 0)
 		{
 			return sizeLeft;
 		}
@@ -33,13 +33,13 @@ public class AnagramDifference {
 		{
 			return 0;
 		}
-		
+
 		final List<String> lettersLeft = Arrays.stream(wordLeft.split("")).collect(Collectors.toList());
 		final List<String> lettersRight = Arrays.stream(wordRight.split("")).collect(Collectors.toList());
-		
+
 		final Set<String> distinctLetters = new HashSet<>(lettersLeft);
 		distinctLetters.addAll(lettersRight);
-		
+
 		int removalCount = 0;
 		for (final String distinctLetter : distinctLetters)
 		{

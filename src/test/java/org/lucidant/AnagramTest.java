@@ -1,5 +1,5 @@
 /**
- * 
+ *
  */
 package org.lucidant;
 
@@ -21,9 +21,6 @@ class AnagramTest {
 	void setUp() throws Exception {
 	}
 
-	/**
-	 * Test method for {@link org.lucidant.codingwars.Anagram#isAnagram(String, String)}.
-	 */
 	@Test
 	void testIsAnagram() {
 	    assertTrue(Anagram.isAnagram("foefet", "toffee"));
@@ -32,9 +29,6 @@ class AnagramTest {
 	    assertFalse(Anagram.isAnagram("apple", "pale"));
 	}
 
-	/**
-	 * Test method for {@link org.lucidant.codingwars.Anagram#isAnagram(String, String)}.
-	 */
 	@Test
 	void testVowelCount() {
 		assertEquals( 5, Anagram.vowelCount("abracadabra"));

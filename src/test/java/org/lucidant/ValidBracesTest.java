@@ -1,5 +1,5 @@
 /**
- * 
+ *
  */
 package org.lucidant;
 
@@ -22,15 +22,12 @@ class ValidBracesTest {
 	void setUp() throws Exception {
 	}
 
-	/**
-	 * Test method for {@link org.lucidant.codingwars.ValidBraces#isValid(String)}.
-	 */
 	@Test
 	void testIsValid() {
 		assertTrue(ValidBraces.isValid("()"));
 		assertTrue(ValidBraces.isValid("(())()"));
 		assertFalse(ValidBraces.isValid("(()))("));
-		
+
 		assertTrue(ValidBraces.isValid("([])"));
 	}
 

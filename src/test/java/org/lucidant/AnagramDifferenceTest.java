@@ -1,5 +1,5 @@
 /**
- * 
+ *
  */
 package org.lucidant;
 
@@ -30,9 +30,13 @@ class AnagramDifferenceTest {
 		assertEquals(AnagramDifference.difference("", "a"),1);
 		assertEquals(AnagramDifference.difference("ab","a"),1);
 		assertEquals(AnagramDifference.difference("ab","cd"),4);
-//		assertEquals(AnagramDifference.difference("aab","a"),2);
-//		assertEquals(AnagramDifference.difference("a","aab"),2);
 		assertEquals(AnagramDifference.difference("codewars","hackerrank"),10);
+
+		assertEquals(AnagramDifference.difference("aab","a"),2);
+		assertEquals(AnagramDifference.difference("a","aab"),2);
+
+		assertEquals(AnagramDifference.difference("pneumonoultramicroscopicsilicovolcanoconiosis",
+												  "pneumonoultramicroscopicsilicovolcanoconiosis"),0);
 	}
 
 }

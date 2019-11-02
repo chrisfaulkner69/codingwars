@@ -1,5 +1,5 @@
 /**
- * 
+ *
  */
 package org.lucidant;
 
@@ -7,67 +7,80 @@ import java.util.Arrays;
 import java.util.stream.IntStream;
 
 /**
+ *  Find and return the middle where the sum on the left is the same as the sum of the right.
+ *
  * @author chrisfaulkner
  *
  */
 public class EqualSidesOfArray {
-	
-	public int arrayPosition(int[] inputArray) {
-		
-		if (inputArray == null || inputArray.length == 0)
-		{
-			return 0;
-		}
-		
-//		Arrays.asList(1,2).stream().
-		
+
+    /**
+     * Find and return the middle where the sum on the left is the same as the sum of the right.
+     * @param inputArray
+     * @return
+     */
+	public int arrayPosition(final int[] inputArray)
+    {
+
+        if (inputArray == null || inputArray.length == 0)
+        {
+            return 0;
+        }
+
+        final int arrayLength = inputArray.length;
+        return IntStream.range(0, arrayLength)
+                        .filter(i ->
+                                    Arrays.stream(Arrays.copyOfRange(inputArray, 0, i)).sum() ==
+                                        Arrays.stream(Arrays.copyOfRange(inputArray, i + 1, arrayLength)).sum()
+                               )
+                        .findFirst()
+                        .orElse(-1);
+    }
+
+    /**
+     * Longer solution.
+     * @param inputArray
+     * @return
+     */
+    int arrayPositionOriginal(final int[] inputArray) {
+
+        if (inputArray == null || inputArray.length == 0)
+        {
+            return 0;
+        }
 		final int arrayLength = inputArray.length;
-		return IntStream.range(0, arrayLength)
-				        .filter(i ->
-				          Arrays.stream(Arrays.copyOfRange(inputArray, 0, i)).sum() ==
-				          Arrays.stream(Arrays.copyOfRange(inputArray, i + 1, arrayLength)).sum()
-				        )
-				        .findFirst()
-				        .orElse(-1);
-		
-		
-		
-//		int startPos = 0;
-//		int leftEndPos = 0;
-//		int rightEndPos = arrayLength - 1;
-//		final int[] reversedArray = Arrays.copyOf(inputArray, arrayLength);
-//		reverse(reversedArray, 0, arrayLength);
-//		
-//		int loopCount = 1;
-//		while (loopCount <= arrayLength)
-//		{
-//			final int leftSum = getTotal(startPos, leftEndPos, inputArray);
-//			final int rightSum = getTotal(startPos, rightEndPos, reversedArray);
-//			if (leftSum == rightSum)
-//			{
-//				return loopCount-1;
-//			}
-//			leftEndPos++;
-//			rightEndPos--;
-//			loopCount++;
-//		}
-//		
-//		return - 1;
+		int leftEndPos = 0;
+		int rightEndPos = arrayLength - 1;
+		final int[] reversedArray = Arrays.copyOf(inputArray, arrayLength);
+		reverse(reversedArray, 0, arrayLength);
+
+		int loopCount = 1;
+		while (loopCount <= arrayLength)
+		{
+			final int leftSum = getTotal(leftEndPos, inputArray);
+			final int rightSum = getTotal(rightEndPos, reversedArray);
+			if (leftSum == rightSum)
+			{
+				return loopCount-1;
+			}
+			leftEndPos++;
+			rightEndPos--;
+			loopCount++;
+		}
+
+		return - 1;
 	}
 
-//	private int getTotal(final int startPos, final int endPos, int[] inputArray) {
-//		int total = 0;
-//		for (int i = 0; i < endPos; i++) {
-//			total = total + inputArray[i];
-//		}
-//		return total;
-//	}
+	private int getTotal(final int endPos, final int[] inputArray) {
+		int total = 0;
+		for (int i = 0; i < endPos; i++) {
+			total = total + inputArray[i];
+		}
+		return total;
+	}
 
-	
+
     public static void reverse(final int[] array, final int startIndexInclusive, final int endIndexExclusive) {
-        if (array == null) {
-            return;
-        }
         int i = startIndexInclusive < 0 ? 0 : startIndexInclusive;
         int j = Math.min(array.length, endIndexExclusive) - 1;
         int tmp;

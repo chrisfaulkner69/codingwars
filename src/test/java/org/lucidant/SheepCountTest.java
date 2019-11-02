@@ -1,5 +1,5 @@
 /**
- * 
+ *
  */
 package org.lucidant;
 
@@ -23,8 +23,8 @@ class SheepCountTest {
 
 	@Test
 	void test() {
-        assertEquals(5, SheepCount.lostSheeps(new int[] {1,2}, new int[] {3,4}, 15)); 
-        assertEquals(6, SheepCount.lostSheeps(new int[] {3,1,2}, new int[] {4,5}, 21));
+        assertEquals(5, SheepCount.lostSheep(new int[] {1,2}, new int[] {3,4}, 15));
+        assertEquals(6, SheepCount.lostSheep(new int[] {3,1,2}, new int[] {4,5}, 21));
 	}
 
 }

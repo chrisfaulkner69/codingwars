@@ -1,5 +1,5 @@
 /**
- * 
+ *
  */
 package org.lucidant;
 
@@ -23,7 +23,7 @@ public class Anagram {
 		{
 			return false;
 		}
-		
+
 		final List<String> letters1 = Arrays.stream(word1.trim().toLowerCase().split("")).sorted().collect(Collectors.toList());
 		final List<String> letters2 = Arrays.stream(word2.trim().toLowerCase().split("")).sorted().collect(Collectors.toList());
 		return letters1.equals(letters2);
@@ -37,14 +37,14 @@ public class Anagram {
 		VOWELS.add("O");
 		VOWELS.add("U");
 	}
-	
-	
+
+
 	public static int vowelCount(final String word)
 	{
 		if (word == null || word.trim().isEmpty())
 		{
 			return 0;
 		}
-		return (int) Arrays.stream(word.toUpperCase().split("")).filter(letter -> VOWELS.contains(letter)).count();
+		return (int) Arrays.stream(word.toUpperCase().split("")).filter(VOWELS::contains).count();
 	}
 }
