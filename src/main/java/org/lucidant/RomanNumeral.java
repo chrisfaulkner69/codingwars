@@ -1,5 +1,5 @@
 /**
- * 
+ *
  */
 package org.lucidant;
 
@@ -58,7 +58,7 @@ public class RomanNumeral {
 
 	}
 
-	public final static String toRoman(int number) {
+	protected final static String toRoman(int number) {
 		int l = map.floorKey(number);
 		if (number == l) {
 			return map.get(number);

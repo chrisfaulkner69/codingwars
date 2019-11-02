@@ -1,5 +1,5 @@
 /**
- * 
+ *
  */
 package org.lucidant;
 
@@ -11,7 +11,7 @@ import java.util.stream.IntStream;
  */
 public class SheepCount {
 
-	public static int lostSheeps(int[] fridayNightCounting, int[] saturdayNightCounting, int sheepsTotal) {
-		return sheepsTotal - (IntStream.of(fridayNightCounting).sum() + IntStream.of(saturdayNightCounting).sum());
+	public static int lostSheep(int[] fridayNightCounting, int[] saturdayNightCounting, int sheepTotal) {
+		return sheepTotal - (IntStream.of(fridayNightCounting).sum() + IntStream.of(saturdayNightCounting).sum());
 	}
 }
