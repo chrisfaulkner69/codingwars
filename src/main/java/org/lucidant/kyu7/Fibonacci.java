@@ -3,7 +3,7 @@ package org.lucidant.kyu7;
 /**
  * Do Fibonacci.
  */
-public class Fibonacci
+public final class Fibonacci
 {
 
     /**
