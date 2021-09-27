@@ -10,6 +10,10 @@ import java.util.Set;
 import java.util.stream.Collectors;
 
 /**
+ * @see <a href="https://www.codewars.com/kata/5b1b27c8f60e99a467000041">Source</a>
+ *
+ * Given two words, how many letters do you have to remove from them to make them anagrams?
+ *
  * @author chrisfaulkner
  *
  */
