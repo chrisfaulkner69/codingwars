@@ -2,15 +2,11 @@ package org.lucidant.kyu7;
 
 /**
  * Do Fibonacci.
+ * @see <a href="https://www.codewars.com/kata/57a1d5ef7cb1f3db590002af">Source</a>
+ *
  */
 public final class Fibonacci
 {
-
-    /**
-     *
-     * @param position
-     * @return
-     */
     public static long fib(final int position){
         if (position <= 0) {
             throw new IllegalArgumentException("Parameter must be > 0");
