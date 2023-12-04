@@ -1,5 +1,5 @@
 /**
- * 
+ *
  */
 package org.lucidant;
 
@@ -13,12 +13,12 @@ public class PalindromeGenerator {
 		final StringBuilder reversed = new StringBuilder(word.toLowerCase()).reverse();
 		return word.toLowerCase().equals(reversed.toString());
 	}
-	
+
 	public String generateString(final String word) {
 		if (isPalindrome(word))
 		{
 			return word;
 		}
-		return new StringBuilder(word).append(new StringBuilder(word).reverse().toString()).toString();
+		return new StringBuilder(word).append(new StringBuilder(word).reverse()).toString();
 	}
 }
