@@ -22,8 +22,7 @@ public class EqualSidesOfArray {
 	public int arrayPosition(final int[] inputArray)
     {
 
-        if (inputArray == null || inputArray.length == 0)
-        {
+        if (inputArray == null || inputArray.length == 0) {
             return 0;
         }
 
@@ -80,8 +79,8 @@ public class EqualSidesOfArray {
 	}
 
 
-    public static void reverse(final int[] array, final int startIndexInclusive, final int endIndexExclusive) {
-        int i = startIndexInclusive < 0 ? 0 : startIndexInclusive;
+public static void reverse(final int[] array, final int startIndexInclusive, final int endIndexExclusive) {
+        int i = Math.max(startIndexInclusive, 0);
         int j = Math.min(array.length, endIndexExclusive) - 1;
         int tmp;
         while (j > i) {

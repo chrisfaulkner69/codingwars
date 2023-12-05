@@ -16,10 +16,9 @@ class MultiplesSummationTest {
 
 	private MultiplesSummation summation;
 	/**
-	 * @throws Exception
-	 */
+     */
 	@BeforeEach
-	void setUp() throws Exception {
+	void setUp() {
 		summation = new MultiplesSummation();
 	}
 

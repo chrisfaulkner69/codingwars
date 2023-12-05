@@ -16,10 +16,9 @@ class WordSpinnerTest {
 
 	private WordSpinner wordSpinner;
 	/**
-	 * @throws Exception
-	 */
+     */
 	@BeforeEach
-	void setUp() throws Exception {
+	void setUp() {
 		wordSpinner = new WordSpinner();
 	}
 

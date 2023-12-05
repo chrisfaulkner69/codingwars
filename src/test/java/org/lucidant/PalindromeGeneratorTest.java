@@ -10,7 +10,7 @@ class PalindromeGeneratorTest {
 	private PalindromeGenerator underTest;
 	
 	@BeforeEach
-	void setUp() throws Exception {
+	void setUp() {
 		underTest = new PalindromeGenerator();
 	}
 

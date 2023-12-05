@@ -3,7 +3,6 @@
  */
 package org.lucidant;
 
-import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
@@ -13,13 +12,6 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
  *
  */
 class SheepCountTest {
-
-	/**
-	 * @throws Exception
-	 */
-	@BeforeEach
-	void setUp() throws Exception {
-	}
 
 	@Test
 	void test() {

@@ -20,10 +20,9 @@ class InterestRateTest {
 	private InterestRate interestRate;
 	
 	/**
-	 * @throws Exception
-	 */
+     */
 	@BeforeEach
-	void setUp() throws Exception {
+	void setUp() {
 		final InterestBounds bound1 = new InterestBounds(new BigDecimal("0.01"), new BigDecimal("0.00"), new BigDecimal("1000.00"));
 		final InterestBounds bound2 = new InterestBounds(new BigDecimal("0.02"), new BigDecimal("1000.00"), new BigDecimal("5000.00"));
 		final InterestBounds bound3 = new InterestBounds(new BigDecimal("0.03"), new BigDecimal("5000.00"), new BigDecimal("10000000.00"));

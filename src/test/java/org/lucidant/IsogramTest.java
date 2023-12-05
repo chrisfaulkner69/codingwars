@@ -3,10 +3,9 @@
  */
 package org.lucidant;
 
-import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
-import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.api.Assertions.*;
 
 /**
  * @author chrisfaulkner
@@ -14,23 +13,16 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
  */
 public class IsogramTest {
 
-	/**
-	 * @throws Exception
-	 */
-	@BeforeEach
-	void setUp() throws Exception {
-	}
-
 	@Test
 	void test() {
-        assertEquals(Isogram.isIsogram("Dermatoglyphics"), true);
-        assertEquals(Isogram.isIsogram("isogram") , true);
-        assertEquals(Isogram.isIsogram("moose") , false);
-        assertEquals(Isogram.isIsogram("isIsogram") , false);
-        assertEquals(Isogram.isIsogram("aba") , false);
-        assertEquals(Isogram.isIsogram("moOse") , false);
-        assertEquals(Isogram.isIsogram("thumbscrewjapingly") , true);
-        assertEquals(Isogram.isIsogram("") , true); 
+        assertTrue(Isogram.isIsogram("Dermatoglyphics"));
+        assertTrue(Isogram.isIsogram("isogram"));
+        assertFalse(Isogram.isIsogram("moose"));
+        assertFalse(Isogram.isIsogram("isIsogram"));
+        assertFalse(Isogram.isIsogram("aba"));
+        assertFalse(Isogram.isIsogram("moOse"));
+        assertTrue(Isogram.isIsogram("thumbscrewjapingly"));
+        assertTrue(Isogram.isIsogram(""));
 	}
 
 }

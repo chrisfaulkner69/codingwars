@@ -11,7 +11,7 @@ import java.util.*;
  */
 public class ValidBraces {
 
-	private static Map<Character, Character> BRACKET_COMBOS = new HashMap<Character, Character>(3);
+	private static final Map<Character, Character> BRACKET_COMBOS = new HashMap<Character, Character>(3);
 
 	private static final Set<Character> OPENERS = new HashSet<>(3);
 	private static final Set<Character> CLOSERS = new HashSet<>(3);
