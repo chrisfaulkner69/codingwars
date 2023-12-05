@@ -1,4 +1,4 @@
-package org.lucidant;
+package org.lucidant.kyu8;
 
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;

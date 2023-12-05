@@ -13,9 +13,6 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
  */
 class CenturyFromYearTest {
 
-	/**
-	 * Test method for {@link org.lucidant.codingwars.CenturyFromYear#century(int)}.
-	 */
 	@Test
 	void testCentury() {
         assertEquals(18, CenturyFromYear.century(1705));

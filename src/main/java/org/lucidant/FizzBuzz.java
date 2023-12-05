@@ -35,7 +35,7 @@ public class FizzBuzz {
 					sb.append(BUZZ);
 				}
 			}
-			System.out.println(sb.toString());
+			System.out.println(sb);
 		}
 	}
 	

@@ -14,11 +14,10 @@ public class SumOfMultiplesOf3or5 {
          Set<Integer> counted = new HashSet<>();
 
         // iterating over an array
-        for (int j = 0; j < ints.length; j++) {
+        for (final int x : ints) {
             // accessing each element of array
-            final int x = ints[j];
-            for (int i = 0; i<number;i = i + x) {
-                if (i%x == 0) {
+            for (int i = 0; i < number; i = i + x) {
+                if (i % x == 0) {
                     if (!counted.contains(i)) {
                         currentSum = currentSum + i;
                         counted.add(i);

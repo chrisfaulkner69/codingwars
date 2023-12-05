@@ -16,8 +16,6 @@ public class EqualSidesOfArray {
 
     /**
      * Find and return the middle where the sum on the left is the same as the sum of the right.
-     * @param inputArray
-     * @return
      */
 	public int arrayPosition(final int[] inputArray)
     {
@@ -38,8 +36,6 @@ public class EqualSidesOfArray {
 
     /**
      * Longer solution.
-     * @param inputArray
-     * @return
      */
     int arrayPositionOriginal(final int[] inputArray) {
 

@@ -10,9 +10,6 @@ public class SentenceWordCount {
 
 	/**
 	 * Return the word count in the sentence with the greatest number of separate words.
-	 *
-	 * @param string
-	 * @return
 	 */
     public int solution(final String string) {
 
@@ -25,23 +22,11 @@ public class SentenceWordCount {
 		final String[] tokens = string.split("[\\.?!]");
 		if (tokens.length > 0)
 		{
-//			for (String sentence : Arrays.stream(tokens).collect(Collectors.toList()))
-//			{
-//				if (!sentence.trim().isEmpty())
-//				{
-//					final String[] words = sentence.trim().split("\\s+");
-//					if (words.length > numWordsInSentence)
-//					{
-//						numWordsInSentence = words.length;
-//					}
-//				}
-//			}
 			numWordsInSentence = Arrays.stream(tokens)
-					.filter(sentence -> !sentence.trim().isEmpty())
-					.map(sentence -> sentence.trim().split("\\s+").length)
-					.max(Comparator.naturalOrder())
-					.orElse(Integer.valueOf(0))
-					.intValue();
+                    .filter(sentence -> !sentence.trim().isEmpty())
+                    .map(sentence -> sentence.trim().split("\\s+").length)
+                    .max(Comparator.naturalOrder())
+                    .orElse(0);
 		}
 		return numWordsInSentence;
     }

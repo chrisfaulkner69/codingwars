@@ -25,15 +25,15 @@ public class MinNumberNotInArray {
     	}
     	
     	// Make a Set, sort and filter out all less than or equal to 0
-    	final Set<Integer> list = Arrays.stream(A).boxed().filter(element -> element.intValue() > 0).sorted().collect(Collectors.toSet());
+    	final Set<Integer> list = Arrays.stream(A).boxed().filter(element -> element > 0).collect(Collectors.toSet());
     	
-    	System.out.println("Post clean " + list.toString());
+    	System.out.println("Post clean " + list);
     	
     	// List must have been entirely numbers less than equal to 0
     	if (!list.isEmpty())
     	{
 	    	for (int i = 1; i < MAX; i++) {
-				if (!list.contains(Integer.valueOf(i)))
+				if (!list.contains(i))
 				{
 					num = i;
 					break;

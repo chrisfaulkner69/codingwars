@@ -25,13 +25,6 @@ class ArrayIntersectionTest {
 
 	@Test
 	void test() {
-//		assertEquals(2, solution.solution(new int[] {1, 3,2,1}, new int[] { 4,2,5,3,2} ));
-//		assertEquals(-1, solution.solution(new int[] {2,1}, new int[] {3,3} ));
-//		assertEquals(-1, solution.solution(new int[] {1,1, 3}, new int[] { 4,2,5} ));
-//		assertEquals(100, solution.solution(new int[] {1,1, 3, 9, 8 , 100, 101}, new int[] { 100, 4,2,5} ));
-//		assertEquals(-1, solution.solution(new int[] {10}, new int[] { 11} ));
-//		assertEquals(-1, solution.solution(new int[] {11}, new int[] { 10} ));
-//		assertEquals(11, solution.solution(new int[] {10,11,11}, new int[] { 11,12} ));
 		assertEquals(12, solution.solution(new int[] {12,13}, new int[] { 9,12} ));
 		assertEquals(-1, solution.solution(new int[] {12,13}, new int[] { 9,14} ));
 		assertEquals(-1, solution.solution(new int[] {14,13}, new int[] {1} ));

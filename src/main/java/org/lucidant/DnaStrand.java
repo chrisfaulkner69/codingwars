@@ -47,8 +47,8 @@ enum DnaAlternative
 				break;
 			}
 		}
-		catch(IllegalArgumentException ex)
-		{
+		catch (IllegalArgumentException ex) {
+			// NOOP
 		}
 		return alternative;
 	}
