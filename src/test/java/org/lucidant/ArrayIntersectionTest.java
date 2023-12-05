@@ -17,10 +17,9 @@ class ArrayIntersectionTest {
 	private ArrayIntersection solution;
 	
 	/**
-	 * @throws Exception
-	 */
+     */
 	@BeforeEach
-	void setUp() throws Exception {
+	void setUp() {
 		solution = new ArrayIntersection();
 	}
 

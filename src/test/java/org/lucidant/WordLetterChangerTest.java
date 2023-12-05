@@ -17,10 +17,9 @@ class WordLetterChangerTest {
 	private WordLetterChanger solution;
 	
 	/**
-	 * @throws Exception
-	 */
+     */
 	@BeforeEach
-	void setUp() throws Exception {
+	void setUp() {
 		solution = new WordLetterChanger();
 	}
 

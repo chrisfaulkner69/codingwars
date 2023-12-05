@@ -9,7 +9,7 @@ class MinNumberNotInArrayTest {
 
 	private MinNumberNotInArray solution;
 	@BeforeEach
-	void setUp() throws Exception {
+	void setUp() {
 		solution = new MinNumberNotInArray();
 	}
 

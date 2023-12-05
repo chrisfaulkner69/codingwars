@@ -4,6 +4,7 @@
 package org.lucidant;
 
 import java.math.BigDecimal;
+import java.math.RoundingMode;
 import java.util.List;
 
 /**
@@ -16,7 +17,7 @@ public class InterestRate {
 	private static final BigDecimal MORE_THOUSAND_RATE = new BigDecimal("0.02");
 	private static final BigDecimal MORE_FIVE_THOUSAND_RATE = new BigDecimal("0.03");
 	
-	private List<InterestBounds> interestBounds;
+	private final List<InterestBounds> interestBounds;
 	
 	public InterestRate(List<InterestBounds> interestBounds) {
 		this.interestBounds = interestBounds;
@@ -28,7 +29,7 @@ public class InterestRate {
 				.filter(bound -> bound.inRange(amount))
 				.findFirst()
 				.map(bound -> bound.calculate(amount))
-				.orElse(BigDecimal.ZERO.setScale(2));
+				.orElse(BigDecimal.ZERO.setScale(2, RoundingMode.HALF_UP));
 	}
 
 }

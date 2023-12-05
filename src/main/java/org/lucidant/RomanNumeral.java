@@ -6,7 +6,6 @@ package org.lucidant;
 import java.util.Arrays;
 import java.util.List;
 import java.util.TreeMap;
-import java.util.stream.Collectors;
 
 /**
  * @author chrisfaulkner
@@ -15,7 +14,7 @@ import java.util.stream.Collectors;
 public class RomanNumeral {
 
 	public static int decode(final String roman) {
-		final List<String> numerals = Arrays.stream(roman.toUpperCase().split("")).collect(Collectors.toList());
+		final List<String> numerals = Arrays.stream(roman.toUpperCase().split("")).toList();
 		int total = 0;
 		int lastValue = -1;
 		boolean decrement = true;
@@ -23,9 +22,8 @@ public class RomanNumeral {
 			final int thisValue = Numeral.getValue(character);
 			if (!decrement) {
 				if (thisValue <= lastValue) {
-					decrement = false;
 					total = total + lastValue;
-				} else if (thisValue > lastValue) {
+				} else {
 					decrement = true;
 					total = total + (thisValue - lastValue);
 				}
@@ -58,7 +56,7 @@ public class RomanNumeral {
 
 	}
 
-	protected final static String toRoman(int number) {
+	protected static String toRoman(int number) {
 		int l = map.floorKey(number);
 		if (number == l) {
 			return map.get(number);

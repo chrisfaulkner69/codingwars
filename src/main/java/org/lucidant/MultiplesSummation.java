@@ -15,13 +15,9 @@ public class MultiplesSummation {
 			if (number%3 == 0 || number%5 == 0)
 			{
 				sum = sum + number;
-
 			}
 		}
 
-//	    return IntStream.range(0, number)
-//                .filter(n -> (n % 3 == 0) || (n % 5 == 0))
-//                .sum();
 		return sum;
 	}
 }
