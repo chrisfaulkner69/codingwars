@@ -22,9 +22,6 @@ class WordSpinnerTest {
 		wordSpinner = new WordSpinner();
 	}
 
-	/**
-	 * Test method for {@link org.lucidant.codingwars.WordSpinner#spinWords(String)}.
-	 */
 	@Test
 	void testSpinWords() {
 		assertEquals("Hey wollef sroirraw", wordSpinner.spinWords("Hey fellow warriors"));

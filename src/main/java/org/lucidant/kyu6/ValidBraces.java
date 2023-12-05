@@ -1,17 +1,18 @@
 /**
  *
  */
-package org.lucidant;
+package org.lucidant.kyu6;
 
 import java.util.*;
 
 /**
+ * README
  * @author chrisfaulkner
  *
  */
 public class ValidBraces {
 
-	private static final Map<Character, Character> BRACKET_COMBOS = new HashMap<Character, Character>(3);
+	private static final Map<Character, Character> BRACKET_COMBOS = new HashMap<>(3);
 
 	private static final Set<Character> OPENERS = new HashSet<>(3);
 	private static final Set<Character> CLOSERS = new HashSet<>(3);
@@ -29,20 +30,16 @@ public class ValidBraces {
 	/**
 	 * Implementation uses a stack to keep an ordered collection of opening braces. Opening ones are added and as the closing are found
 	 * then the opening are removed from the stack.
-	 *
-	 *  For "()", first iteration puts the ( on the stack second goes to the else, finds that there is a ( on the  top of the stack and removes it.
+	 * <p>For "()", first iteration puts the ( on the stack second goes to the else, finds that there is a ( on the  top of the stack and removes it.
 	 *  All clear.
 	 *
 	 *  <p>For ([]), it's the same really, we get ( on stack, then [ so [ is at top. If the next character is ] then all good and stack is popped.
 	 *  If the next character had been ), it would not have been the correct and we'd leave the loop.
-	 *
-	 * @param braces
-	 * @return
 	 */
 	public static boolean isValid(final String braces)
 	{
 		// The stack only ever contains opening braces
-		final Stack<Character> openBraces = new Stack<Character>();
+		final Stack<Character> openBraces = new Stack<>();
 
 		for (int i = 0; i < braces.length(); i++)
 		{
@@ -75,9 +72,6 @@ public class ValidBraces {
 
 	/**
 	 * Dos the current braces match the entry at the top of the stack ?
-	 * @param currentBrace
-	 * @param lastOpener
-	 * @return
 	 */
 	private static boolean closesOpenedBracket(final char currentBrace, final char lastOpener)
 	{

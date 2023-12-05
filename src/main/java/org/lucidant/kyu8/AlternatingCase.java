@@ -1,11 +1,12 @@
 /**
  *
  */
-package org.lucidant;
+package org.lucidant.kyu8;
 
 import java.util.Arrays;
 
 /**
+ * README DONE
  * @author chrisfaulkner
  *
  */
