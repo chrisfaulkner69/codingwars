@@ -27,6 +27,11 @@ https://www.codewars.com/kata/592e830e043b99888600002d
 
 Convert letters to numbers, add secret key value.
 
+#### Isogram
+https://www.codewars.com/kata/54ba84be607a92aa900000f1
+
+No repeating letters.
+
 
 ### 8 KYU
 #### altERnaTIng cAsE <=> ALTerNAtiNG CaSe

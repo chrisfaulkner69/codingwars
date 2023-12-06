@@ -7,7 +7,6 @@ import java.util.Arrays;
 import java.util.HashSet;
 import java.util.List;
 import java.util.Set;
-import java.util.stream.Collectors;
 
 /**
  * @author chrisfaulkner
@@ -24,12 +23,12 @@ public class Anagram {
 			return false;
 		}
 
-		final List<String> letters1 = Arrays.stream(word1.trim().toLowerCase().split("")).sorted().collect(Collectors.toList());
-		final List<String> letters2 = Arrays.stream(word2.trim().toLowerCase().split("")).sorted().collect(Collectors.toList());
+		final List<String> letters1 = Arrays.stream(word1.trim().toLowerCase().split("")).sorted().toList();
+		final List<String> letters2 = Arrays.stream(word2.trim().toLowerCase().split("")).sorted().toList();
 		return letters1.equals(letters2);
 	}
 
-	private static final Set<String> VOWELS = new HashSet<String>(5);
+	private static final Set<String> VOWELS = new HashSet<>(5);
 	static {
 		VOWELS.add("A");
 		VOWELS.add("E");

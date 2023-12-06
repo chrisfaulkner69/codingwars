@@ -36,7 +36,7 @@ public class RomanNumeral {
 		return !decrement ? total + lastValue : total;
 	}
 
-	private final static TreeMap<Integer, String> map = new TreeMap<Integer, String>();
+	private final static TreeMap<Integer, String> map = new TreeMap<>();
 
 	static {
 
@@ -71,7 +71,7 @@ enum Numeral {
 
 	private final int value;
 
-	private Numeral(int value) {
+	Numeral(int value) {
 		this.value = value;
 	}
 
