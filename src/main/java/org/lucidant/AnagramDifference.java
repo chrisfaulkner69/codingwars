@@ -7,7 +7,6 @@ import java.util.Arrays;
 import java.util.HashSet;
 import java.util.List;
 import java.util.Set;
-import java.util.stream.Collectors;
 
 /**
  * @see <a href="https://www.codewars.com/kata/5b1b27c8f60e99a467000041">Source</a>
@@ -38,8 +37,8 @@ public class AnagramDifference {
 			return 0;
 		}
 
-		final List<String> lettersLeft = Arrays.stream(wordLeft.split("")).collect(Collectors.toList());
-		final List<String> lettersRight = Arrays.stream(wordRight.split("")).collect(Collectors.toList());
+		final List<String> lettersLeft = Arrays.stream(wordLeft.split("")).toList();
+		final List<String> lettersRight = Arrays.stream(wordRight.split("")).toList();
 
 		final Set<String> distinctLetters = new HashSet<>(lettersLeft);
 		distinctLetters.addAll(lettersRight);

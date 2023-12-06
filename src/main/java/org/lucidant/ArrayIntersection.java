@@ -14,7 +14,7 @@ public class ArrayIntersection {
 	
 	int solution(int[] A, int[] B) {
         int n = A.length;
-        int m = B.length;;
+        int m = B.length;
         Arrays.sort(A);
         Arrays.sort(B);
         int i = 0;

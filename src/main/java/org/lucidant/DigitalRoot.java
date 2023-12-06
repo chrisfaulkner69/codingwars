@@ -4,7 +4,6 @@
 package org.lucidant;
 
 import java.util.Arrays;
-import java.util.stream.Collectors;
 
 /**
  * @author chrisfaulkner
@@ -18,7 +17,7 @@ public class DigitalRoot {
 		{
 			startValue = Arrays.stream(String.valueOf(startValue).split(""))
 							   .map(Integer::valueOf)
-							   .collect(Collectors.toList())
+							   .toList()
 							   .stream()
 							   .mapToInt(i -> i).sum();
 		}

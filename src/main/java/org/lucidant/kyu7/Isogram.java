@@ -1,7 +1,7 @@
 /**
  * 
  */
-package org.lucidant;
+package org.lucidant.kyu7;
 
 import java.util.Arrays;
 import java.util.stream.Collectors;
