@@ -19,6 +19,8 @@ Just a string intersection, checking if strings are in order.
 #### Valid Braces
 https://www.codewars.com/kata/5277c8a221e209d3f6000b56
 
+#### Find the int with the odd count in an array
+https://www.codewars.com/kata/54da5a58ea159efa38000836
 
 ### 7 KYU
 
