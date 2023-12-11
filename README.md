@@ -8,6 +8,11 @@ https://www.codewars.com/kata/56f4ff45af5b1f8cd100067d
 
 Take some numbers, convert to words, sort alphabetically 1,2,3,4 -> four, one, three, two
 
+#### Pagination Helper
+https://www.codewars.com/kata/56f4ff45af5b1f8cd100067d
+
+#### Human Readable Time (from seconds)
+https://www.codewars.com/kata/52685f7382004e774f0001f7/java
 
 ### 6 KYU 
 
