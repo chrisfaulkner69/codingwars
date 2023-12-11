@@ -1,7 +1,7 @@
 /**
  *
  */
-package org.lucidant;
+package org.lucidant.kyu6;
 
 import java.util.Arrays;
 import java.util.List;
@@ -13,7 +13,7 @@ import java.util.TreeMap;
  */
 public class RomanNumeral {
 
-	public static int decode(final String roman) {
+	static int decode(final String roman) {
 		final List<String> numerals = Arrays.stream(roman.toUpperCase().split("")).toList();
 		int total = 0;
 		int lastValue = -1;
