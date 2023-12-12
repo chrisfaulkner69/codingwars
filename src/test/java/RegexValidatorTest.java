@@ -9,6 +9,13 @@ import static org.lucidant.RegexValidator.validatePin;
 
 class RegexValidatorTest {
 
+    @Test
+    void replaceLastComma() {
+        final var time = "1 day, 1 hour, 3 minutes";
+        final var expected = "1 day, 1 hour and 3 minutes";
+        // ?! negative lookahead
+        assertThat(time.replaceAll(", (?!.+,)", " and ")).isEqualTo(expected);
+    }
 
     @Test
     void simplePasswordRegex() {
