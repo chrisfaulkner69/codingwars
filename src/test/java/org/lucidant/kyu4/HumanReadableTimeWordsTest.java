@@ -34,8 +34,8 @@ class HumanReadableTimeWordsTest {
     @Test
     void moreThanMinutes() {
         assertEquals("2 minutes and 2 seconds", formatDuration(122));
-        assertEquals("1 minute and 2 seconds", HumanReadableTimeWords.formatDuration(62));
-        assertEquals("2 minutes", HumanReadableTimeWords.formatDuration(120));
+        assertEquals("1 minute and 2 seconds", formatDuration(62));
+        assertEquals("2 minutes", formatDuration(120));
     }
 
     @Test
