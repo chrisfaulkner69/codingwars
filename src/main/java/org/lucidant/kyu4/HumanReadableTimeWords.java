@@ -65,6 +65,7 @@ public class HumanReadableTimeWords {
                 .filter(p -> !Objects.equals(p, ""))
                 .collect(Collectors.joining(", "));
 
+        // See https://regexr.com/7ovld for a saved regex
         return str.replaceAll(", (?!.+,)", " and ");
     }
     public static String formatTime(String word, int time){
