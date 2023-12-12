@@ -11,7 +11,7 @@ public class HumanReadableTimeWords {
     public static final int SECONDS_PER_HOUR = 60 * 60;
     public static final int SECONDS_PER_DAY = 86_400;
 
-    public static final int SECONDS_PER_YEAR = 31_556_952;
+    public static final int SECONDS_PER_YEAR = 31_536_000;
 
     public static String formatDuration(int secs) {
 
