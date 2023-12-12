@@ -1,7 +1,4 @@
-/**
- *
- */
-package org.lucidant;
+package org.lucidant.kyu7;
 
 import org.junit.jupiter.api.Test;
 

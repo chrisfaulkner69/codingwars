@@ -1,5 +1,11 @@
 # Completed KATA
 
+### 4 KYU
+
+#### Human Readable Duration format 
+https://www.codewars.com/kata/52742f58faf5485cae000b9a
+
+returns "1 year, 2 days, 3 hours and 5 seconds" type string from seconds
 
 ### 5 KYU
 
