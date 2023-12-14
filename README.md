@@ -25,6 +25,9 @@ https://www.codewars.com/kata/656e4602ee72af0017e37e82
 
 Work out the time after a number of chimes has past. Start at 9:53, 2 chimes. What is the time ?
 
+### Pig Latin
+https://www.codewars.com/kata/520b9d2ad5c005041100000f/train/java
+
 ### 6 KYU 
 
 #### "What's A Name In"
