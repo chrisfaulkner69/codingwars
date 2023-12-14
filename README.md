@@ -20,6 +20,11 @@ https://www.codewars.com/kata/56f4ff45af5b1f8cd100067d
 #### Human Readable Time (from seconds)
 https://www.codewars.com/kata/52685f7382004e774f0001f7/java
 
+### Cuckoo Clock
+https://www.codewars.com/kata/656e4602ee72af0017e37e82
+
+Work out the time after a number of chimes has past. Start at 9:53, 2 chimes. What is the time ?
+
 ### 6 KYU 
 
 #### "What's A Name In"
