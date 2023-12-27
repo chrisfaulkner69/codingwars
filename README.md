@@ -41,6 +41,9 @@ https://www.codewars.com/kata/5277c8a221e209d3f6000b56
 #### Find the int with the odd count in an array
 https://www.codewars.com/kata/54da5a58ea159efa38000836
 
+#### Who Likes It, simple array handling and string insertion
+https://www.codewars.com/kata/5266876b8f4bf2da9b000362
+
 ### 7 KYU
 
 #### "Digital Cypher"
