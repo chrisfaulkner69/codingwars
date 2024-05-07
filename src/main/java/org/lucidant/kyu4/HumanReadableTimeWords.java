@@ -34,10 +34,6 @@ public class HumanReadableTimeWords {
         return switch (timesSize) {
             case 0 -> "now";
             case 1 -> times.getFirst();
-//            default -> times.stream()
-//                    .limit(timesSize - 1)
-//                    .collect(Collectors.joining(", "))
-//                    + " and " + times.get(timesSize - 1);
             default -> STR."\{times.stream()
                     .limit(timesSize - 1)
                     .collect(Collectors.joining(", "))} and \{times.getLast()}";
