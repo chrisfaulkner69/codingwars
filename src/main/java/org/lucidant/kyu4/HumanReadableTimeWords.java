@@ -7,6 +7,13 @@ import java.util.List;
 import java.util.Objects;
 import java.util.stream.Collectors;
 
+/**
+ * Take seconds and return human readable time.
+ * For seconds = 62, your function should return "1 minute and 2 seconds"
+ * For seconds = 3662, your function should return "1 hour, 1 minute and 2 seconds"
+ *
+ * @see <a href="https://www.codewars.com/kata/52742f58faf5485cae000b9a">Source</a>
+ */
 public class HumanReadableTimeWords {
     public static final int SECONDS_PER_HOUR = 60 * 60;
     public static final int SECONDS_PER_DAY = 86_400;
