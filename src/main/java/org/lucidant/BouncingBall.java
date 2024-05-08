@@ -7,7 +7,6 @@ public class BouncingBall {
             return -1;
         }
         int windowPassCount = -1;
-//        double lastBounce = bounce * h;
         while (h > window) {
             windowPassCount += 2;
             h = bounce * h;

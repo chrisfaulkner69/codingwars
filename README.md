@@ -7,7 +7,14 @@ https://www.codewars.com/kata/52742f58faf5485cae000b9a
 
 returns "1 year, 2 days, 3 hours and 5 seconds" type string from seconds
 
+
 ### 5 KYU
+
+### Matching And Substituting
+https://www.codewars.com/kata/59de1e2fe50813a046000124
+
+Takes a multi line string, search and replace with regex.
+
 
 #### "Sort - one, three, two"
 https://www.codewars.com/kata/56f4ff45af5b1f8cd100067d

@@ -2,6 +2,14 @@ package org.lucidant.kyu5;
 
 import java.util.regex.Pattern;
 
+/**
+ * <a href="https://www.codewars.com/kata/59de1e2fe50813a046000124">Source</a>
+ *
+ * Here we will work with strings like the string data above and not with files.
+ * The function change(s, prog, version) given:
+ * s=data, prog="Ladder" , version="1.1" will return:
+ * "Program: Ladder Author: g964 Phone: +1-503-555-0090 Date: 2019-01-01 Version: 1.1"
+ */
 public class MatchSubst {
 
     public static final Pattern DECIMAL_PATTERN = Pattern.compile("[0-9]{1,}\\.[0-9]{1,}$");

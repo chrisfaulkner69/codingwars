@@ -14,19 +14,25 @@ import java.util.Set;
  */
 public class Anagram {
 
-	public static boolean isAnagram(final String word1, final String word2)
-	{
-		final int word1Length = word1 == null ? 0 : word1.trim().length();
-		final int word2Length = word2 == null ? 0 : word2.trim().length();
-		if (word1Length != word2Length)
-		{
-			return false;
-		}
+    public static boolean isAnagram(final String word1, final String word2) {
+        final String cleanWord1 = (word1 == null ? "" : word1.trim().toLowerCase());
+        final String cleanWord2 = (word2 == null ? "" : word2.trim().toLowerCase());
 
-		final List<String> letters1 = Arrays.stream(word1.trim().toLowerCase().split("")).sorted().toList();
-		final List<String> letters2 = Arrays.stream(word2.trim().toLowerCase().split("")).sorted().toList();
-		return letters1.equals(letters2);
-	}
+        if (cleanWord1.length() != cleanWord2.length()) {
+            return false;
+        }
+
+        final List<String> letters1 = getSortedLetters(cleanWord1);
+        final List<String> letters2 = getSortedLetters(cleanWord2);
+
+        return letters1.equals(letters2);
+    }
+
+    private static List<String> getSortedLetters(String word) {
+        return Arrays.stream(word.split(""))
+				.sorted()
+				.toList();
+    }
 
 	private static final Set<String> VOWELS = new HashSet<>(5);
 	static {
