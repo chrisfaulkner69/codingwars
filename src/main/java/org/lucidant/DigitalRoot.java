@@ -4,6 +4,9 @@
 package org.lucidant;
 
 /**
+ * The `DigitalRoot` class efficiently calculates the digital root of an integer by summing its digits iteratively until a single-digit number is obtained. The `digitalRoot` method handles the main logic, while the `calculateSumOfDigits` method assists in summing the digits of an integer.
+ *
+ *
  * @author chrisfaulkner
  *
  */

@@ -69,6 +69,7 @@ public class HumanReadableTimeWords {
                 .collect(Collectors.joining(", "));
 
         // See https://regexr.com/7ovld for a saved regex
+        // REGEX to get the last comma
         return str.replaceAll(", (?!.+,)", " and ");
     }
     public static String formatTime(String word, int time){
