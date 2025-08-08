@@ -10,7 +10,7 @@
   <properties>
     <java.version>21</java.version>
     <junit.version>5.12.1</junit.version>
-    <assertj.version>3.27.3</assertj.version>
+    <assertj.version>3.27.4</assertj.version>
     <surefire.plugin.version>3.5.2</surefire.plugin.version>
   </properties>
 
