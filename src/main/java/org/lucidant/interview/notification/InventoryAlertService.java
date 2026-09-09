@@ -10,7 +10,6 @@ public class InventoryAlertService {
 
     private final StockCheckService stockCheckService;
 
-
     public InventoryAlertService(NotificationGateway notificationGateway,
                                  StockCheckService stockCheckService,
                                  Map<String, Integer> minQuantityLevels) {

@@ -2,9 +2,11 @@ package org.lucidant.interview.maze;
 
 import java.util.ArrayList;
 import java.util.Arrays;
-import java.util.Collections;
 import java.util.Comparator;
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
+import java.util.Set;
 
 public class MazeWalker {
 
@@ -15,18 +17,16 @@ public class MazeWalker {
     }
 
     List<Direction> solve() {
-        if (mazeService.isAtExit()) {
-            return Collections.emptyList();
-        }
-
         List<Direction> path = new ArrayList<>();
+        Map<Integer, Set<Direction>> failedAtDepth = new HashMap<>();
 
-        // Nowhere to go but backtrack
         while (!mazeService.isAtExit()) {
-            List<Direction> forwardPossibleDirections = getNewDirections(path);
+            List<Direction> forwardPossibleDirections = getNewDirections(path, failedAtDepth);
             // Nowhere new to go
             if (forwardPossibleDirections.isEmpty() && !path.isEmpty()) {
-                Direction undo = path.getLast().getOpposite();
+                Direction failedDirection = path.getLast();
+                failedAtDepth.computeIfAbsent(path.size() - 1, d -> new java.util.HashSet<>()).add(failedDirection);
+                Direction undo = failedDirection.getOpposite();
                 backtrack(path, undo);
                 System.out.println("[Backtrack] Moved direction: " + undo);
             } else if (!forwardPossibleDirections.isEmpty()) {
@@ -56,12 +56,13 @@ public class MazeWalker {
         return forwardPossibleDirections.getFirst();
     }
 
-    List<Direction> getNewDirections(List<Direction> path) {
+    List<Direction> getNewDirections(List<Direction> path, Map<Integer, Set<Direction>> failedAtDepth) {
 
         var last = !path.isEmpty() ? path.getLast() : null;
 
         return Arrays.stream(Direction.values())
                 .filter(d -> last == null || !d.isOpposite(last))
+                .filter(d -> !failedAtDepth.getOrDefault(path.size(), Set.of()).contains(d))
                 .filter(mazeService::canMove)
                 .sorted(Comparator.comparing(Direction::name))
                 .toList();

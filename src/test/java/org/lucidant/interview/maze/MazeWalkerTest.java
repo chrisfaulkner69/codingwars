@@ -8,6 +8,7 @@ import org.mockito.Mock;
 import org.mockito.junit.jupiter.MockitoExtension;
 
 import java.util.Collections;
+import java.util.HashMap;
 import java.util.List;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
@@ -121,6 +122,28 @@ class MazeWalkerTest {
         }
 
         @Test
+        void givenDeadEndOffTheStart_whenMove_thenBacktracksPastEmptyPath() {
+
+            var mazeService = new GridMazeService(new String[] {
+                    "#####",
+                    "#.#.#",
+                    "#..S#",
+                    "#E..#",
+                    "#####"
+            });
+
+            mazeWalker = new MazeWalker(mazeService);
+
+            List<Direction> path = mazeWalker.solve();
+
+            // NORTH from S is a genuine dead-end pocket (only way out is back the way you came).
+            // Correct solve() must abandon it, backtrack all the way to an empty path, and then
+            // choose a *different* direction than NORTH — not retry the dead end forever.
+            assertEquals(3, path.size());
+            assertEquals(SOUTH, path.getFirst());
+        }
+
+        @Test
         void givenStepsPossible_whenGetNextPossible_thenDone() {
 
             var mazeService = new GridMazeService(new String[] {
@@ -136,7 +159,7 @@ class MazeWalkerTest {
             // the last step was NORTH from bottom left
             // We can go north again or EAST
             var path = List.of(NORTH);
-            List<Direction> newD = mazeWalker.getNewDirections(path);
+            List<Direction> newD = mazeWalker.getNewDirections(path, new HashMap<>());
 
             assertEquals(2, newD.size());
             assertSame(EAST, newD.getFirst());
@@ -155,7 +178,7 @@ class MazeWalkerTest {
 
             mazeWalker = new MazeWalker(mazeService);
 
-            List<Direction> path = mazeWalker.getNewDirections(Collections.emptyList());
+            List<Direction> path = mazeWalker.getNewDirections(Collections.emptyList(), new HashMap<>());
 
             System.out.println(path.toString());
 
